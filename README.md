@@ -1,13 +1,11 @@
 # Med-GAN: Unsupervised Semantic Image Synthesis for Medical Imaging
 
 
-Obtaining large labeled datasets in the medical field is often hard due to privacy concerns. A 
-promising solution is to generate synthetic labeled data with Generative Adversarial Networks. 
-Given a labeled dataset A containing images from one modality (e.g. CT scans) and their semantic 
-labels, and an unlabeled dataset B with unlabeled images from another modality (MRI scans), the 
-task is to translate the semantic maps from dataset A to images from dataset B. Several challenges 
-exist in this task due to the scarcity of the labels, and the heterogeneity of the data (from different 
-patients and modalities).
+Obtaining large labeled datasets in the medical field is often hard due to privacy concerns. Our
+approach leverages a unique dataset comprising labeled CT scans with corresponding semantic labels and an unlabeled MR dataset without semantic annotations.
+The primary goal is to facilitate the translation of 2D CT semantic maps to 2D MR images. we introduce an innovative unsupervised method uti-
+lizing unpaired images to train our GAN model, termed Med-USIS, based on several datasets. Through quantitative evaluations, Med-USIS has proven its efficacy
+in synthesizing MR images that closely approximate actual MR scans in terms of quality Several 
 ![img.png](https://github.com/TWWinde/Medical-Images-Synthesis/blob/main/assert/ctvsmri.png)
 
 ## Overview
@@ -17,6 +15,8 @@ In addition, many different images can be generated from any given label map by 
 We implemented [Oasis](https://arxiv.org/abs/2012.04781)-generator, which is based on SPADE and Wavelet-discriminator. 
 This repo is supervised paired image synthesis, the first step towards our final goal, using CT labels to generate CT images.
 Our final model for unpaired image synthesis is still in progress and will be released soon!
+
+![img.png](https://github.com/TWWinde/Med-USIS/blob/main/images/model.png)
 
 
 ## Setup
