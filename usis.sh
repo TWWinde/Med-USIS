@@ -1,26 +1,21 @@
-#!/bin/bash -l
+#!/bin/bash
 
-#Slurm parameters
-#SBATCH --job-name=med_usis
-#SBATCH --output=med_usis%j.%N.out
-#SBATCH --ntasks=1
+####
+
+# Define slurm job parameters
+
+####
+
+#SBATCH --job-name=Med-USIS
 #SBATCH --cpus-per-task=4
-#SBATCH --time=6-23:00:00
-#SBATCH --mem=64G
-#SBATCH --nodes=1
+#SBATCH --partition=student
 #SBATCH --gpus=1
-#SBATCH --qos=batch
-# SBATCH --nodes=1
-#SBATCH --gpus=rtx_a5000:1
-# SBATCH --gpus=geforce_rtx_2080ti:1
-# SBATCH --gpus=geforce_gtx_titan_x:1
+#SBATCH --time 31-0
+#SBATCH --nodelist=node-gpu-01
+#SBATCH --error=job.%J.%x.err
+#SBATCH --output=job.%J.%x.out
 
-# Activate everything you need
-
-#conda activate /anaconda3/envs/myenv
-pyenv activate venv
-module load cuda
-# Run your python code
+module load cuda/11.3
 
 #experiment_1
 python train.py --name usis_wavelet --dataset_mode ct2mri --gpu_ids 0 \
