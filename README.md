@@ -1,4 +1,4 @@
-# Unsupervised Semantic Image Synthesis for Medical Imaging
+# Med-GAN: Unsupervised Semantic Image Synthesis for Medical Imaging
 
 
 Obtaining large labeled datasets in the medical field is often hard due to privacy concerns. A 
