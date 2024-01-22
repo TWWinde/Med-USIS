@@ -12,9 +12,8 @@ in synthesizing MR images that closely approximate actual MR scans in terms of q
 
 This repository is about part of my master research project (Forschungsarbeit), which aims at generating realistic looking medical images from semantic label maps. 
 In addition, many different images can be generated from any given label map by simply resampling a noise vector.
-We implemented [Oasis](https://arxiv.org/abs/2012.04781)-generator, which is based on SPADE and Wavelet-discriminator. 
-This repo is supervised paired image synthesis, the first step towards our final goal, using CT labels to generate CT images.
-Our final model for unpaired image synthesis is still in progress and will be released soon!
+We implemented Wavelet-generator, which is based on SPADE and Wavelet-discriminator. 
+This repo is unsupervised medical image synthesis, using CT labels to generate MR images. The architecture is shown below.
 
 ![img.png](https://github.com/TWWinde/Med-USIS/blob/main/images/model.png)
 
