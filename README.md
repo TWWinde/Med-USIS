@@ -21,14 +21,14 @@ This repo is unsupervised medical image synthesis, using CT labels to generate M
 ## Setup
 First, clone this repository:
 ```
-git clone https://github.com/TWWinde/Medical-Images-Synthesis.git
-cd Medical-Images-Synthesis
+git clone https://github.com/TWWinde/Med-USIS.git
+cd Med-USIS
 ```
 
 The basic requirements are PyTorch and Torchvision.
 ```
-conda env create MIS
-source activate MIS
+conda env create Med-USIS
+source activate Med-USIS
 ```
 ## Datasets
 
@@ -38,7 +38,7 @@ We implement our models based on [AutoPET](https://autopet.grand-challenge.org),
 For medical images, the pre-processing is of great importance.
 Execute ```dataloaders/generate_2d_images.py```to transfer 3d niffti images to slices(2d labels and RGB images).
 implementing ```remove_background```function can remove the useless artifacts from medical equipment 
-![img.png](https://github.com/TWWinde/Medical-Images-Synthesis/blob/main/assert/WechatIMG3102.png)
+![img.png](https://github.com/TWWinde/Med-USIS/blob/main/images/removebackground.png)
 The script above results in the following folder structure.
 
 ```
