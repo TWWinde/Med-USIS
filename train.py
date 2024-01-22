@@ -20,7 +20,7 @@ im_saver = utils.image_saver(opt)
 fid_computer = fid_pytorch(opt, dataloader_val)
 metrics_computer = metrics(opt, dataloader_val)
 
-#--- create models ---#
+#--- create models --- #
 model = models.Unpaired_model(opt)
 model = models.put_on_multi_gpus(model, opt)
 
