@@ -3,7 +3,10 @@
 
 Obtaining large labeled datasets in the medical field is often hard due to privacy concerns. Our
 approach leverages a unique dataset comprising labeled CT scans with corresponding semantic labels and an unlabeled MR dataset without semantic annotations.
-The primary goal is to facilitate the translation of 2D CT semantic maps to 2D MR images. we introduce an innovative unsupervised method uti-
+The primary goal is to facilitate the translation of 2D CT semantic maps to 2D MR images.  By stripping away directly identifiable personal
+information and focusing on medically relevant, de-identified data (semantic maps), this approach not only
+complies with legal and ethical standards but also minimizes the privacy risks associated
+with data exposure during sharing or publicationwe introduce an innovative unsupervised method uti-
 lizing unpaired images to train our GAN model, termed Med-USIS, based on several datasets. Through quantitative evaluations, Med-USIS has proven its efficacy
 in synthesizing MR images that closely approximate actual MR scans in terms of quality Several 
 ![img.png](https://github.com/TWWinde/Medical-Images-Synthesis/blob/main/assert/ctvsmri.png)
