@@ -84,9 +84,8 @@ The FID, PIPS, PSNR, RMSE and SSIM are computed on the fly during training, usin
 At the beginning of training, the inception moments of the real images are computed before the actual training loop starts. 
 How frequently the FID should be evaluated is controlled via the parameter ```--freq_fid```, which is set to 5000 steps by default.
 The inception net that is used for FID computation automatically downloads a pre-trained inception net checkpoint. 
-The Alex net that is used for PIPs computation automatically downloads a pre-trained Alex net checkpoint. 
-The results are ploted automatically and shown below.
-![img.png](https://github.com/TWWinde/Medical-Images-Synthesis/blob/main/assert/metrics.png)
+The VggNet that is used for LPIPs computation automatically downloads a pre-trained VggNet checkpoint. 
+
 In oder to compute MIoU, we use the powerful segmentation benchmark--nnUnet. We trained on AutoPET 2d slices and our validation Dice reached 0.78.
 The checkpoints for the pre-trained segmentation model is available [here](). For the major classed, the MIoU are more the 0.7. The code of nnUnet id loacted
 in my another [repo](https://github.com/TWWinde/nnUNet). After configuration, you can simply execute ```utils/miou_folder/nnunet_segment.py```
@@ -158,6 +157,13 @@ Legend:
 - **Bold**: Best score achieved in the column.
 
 ![img.png](https://github.com/TWWinde/Med-USIS/blob/main/images/maeimages.png)
+
+### Ablation on 3D Noise
+
+| 3D Noise Input | FID   | LPIPs | SSIM   | RMSE | PSNR  |
+|----------------|-------|-------|--------|------|-------|
+| w              | 51.92 | 0.15  | 0.9984 | 0.12 | 18.77 |
+| w/o            | 60.35 | 0.26  | 0.9951 | 0.19 | 14.19 |
 
 
 ## License
