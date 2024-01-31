@@ -141,7 +141,8 @@ After implementation:
 Legend:
 - ✔️: Feature is included in the experiment.
 - **Bold**: Best score achieved in the column.
-![img.png](https://github.com/TWWinde/Med-USIS/images/maeimages.png)
+
+![img.png](https://github.com/TWWinde/Med-USIS/blob/main/images/maeimages.png)
 
 
 ## License
