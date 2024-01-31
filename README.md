@@ -25,6 +25,7 @@ This repo is unsupervised medical image synthesis, using CT labels to generate M
 | Name    | OASIS Generator | Wavelet Generator | Wavelet Discriminator | U-Net  |
 |---------|-----------------|-------------------|-----------------------|--------|
 | #param  | 71.1M           | 55.8M             | 26.2M                 | 22.3M  |
+
 ## Setup
 First, clone this repository:
 ```
