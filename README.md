@@ -127,7 +127,20 @@ and use Mask Loss to enhance shape consistency. The basic idea is very straightf
 After implementation:
 ![img.png](https://github.com/TWWinde/Medical-Images-Synthesis/blob/main/assert/combined_generated2.png)
 
+## Ablation Study on SynthRAD2023
 
+| Exp   | Unpaired | Generator OASIS | Generator Wavelet | $\mathcal{L}_{mask}$ | FID    | LPIPS | SSIM   | RMSE | PSNR  |
+|-------|----------|-----------------|-------------------|----------------------|--------|-------|--------|------|-------|
+| Exp-1 | ✔️       | ✔️              |                   |                      | 60.93  | 0.15  | 0.9983 | 0.12 | 18.54 |
+| Exp-2 | ✔️       | ✔️              |                   | ✔️                   | 59.97  | 0.16  | 0.9980 | 0.12 | 18.09 |
+| Exp-3 | ✔️       |                 | ✔️                |                      | **51.92** | 0.15  | 0.9983 | 0.12 | 18.69 |
+| Exp-4 | ✔️       |                 | ✔️                | ✔️                   | 54.53  | **0.15** | 0.9984 | 0.12 | **18.77** |
+| Exp-5 |          | ✔️              |                   | ✔️                   | 60.70  | 0.17  | 0.9978 | 0.13 | 17.69 |
+| Exp-6 |          |                 | ✔️                | ✔️                   | 68.35  | 0.17  | **0.9985** | **0.11** | **19.08** |
+
+Legend:
+- ✔️: Feature is included in the experiment.
+- **Bold**: Best score achieved in the column.
 
 
 
