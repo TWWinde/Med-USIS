@@ -8,7 +8,7 @@ lizing unpaired images to train our GAN model, termed Med-USIS, based on several
 in synthesizing MR images that closely approximate actual MR scans in terms of quality Several 
 ![img.png](https://github.com/TWWinde/Medical-Images-Synthesis/blob/main/assert/ctvsmri.png)
 
-## Overview
+## Med-USIS Framework
 
 This repository is about part of my master research project (Forschungsarbeit), which aims at generating realistic looking medical images from semantic label maps. 
 In addition, many different images can be generated from any given label map by simply resampling a noise vector.
