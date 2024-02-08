@@ -15,6 +15,8 @@
 #SBATCH --error=job.%J.%x.err
 #SBATCH --output=job.%J.%x.out
 
+
+pyenv activate venv
 module load cuda/11.3
 
 #pre-process
